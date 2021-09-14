@@ -19,5 +19,6 @@ canvas {
 .heading
 {
    text-align:center;
+  background-color:#ffcc5c;
   font-family: 'ProFontWindows', sans-serif;
 }
