@@ -14,8 +14,7 @@ canvas {
 #canva
 {
  margin:0;
- padding:0;
- display:flex;
+ padding:5%;
   background-color:#ffcc5c;
   text-align:center;
 }
@@ -24,4 +23,5 @@ canvas {
    text-align:center;
   background-color:#ffcc5c;
   font-family: 'ProFontWindows', sans-serif;
+ margin-bottom:0px;
 }
