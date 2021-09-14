@@ -120,12 +120,12 @@ function setup() {
     }
   current=grid[0];
 
-  for(var k=0;k<15;k++)
+  for(var k=0;k<30;k++)
   {
   a1.push(floor(random(1,rows-1)));
   a2.push(floor(random(1,cols)));
   }
-  for(var k=0;k<15;k++)
+  for(var k=0;k<30;k++)
     {
       c=grid[index(a1[k],a2[k])];
       grid2[index(a1[k],a2[k])]=-1;
@@ -174,7 +174,7 @@ function draw() {
       {
         current=stack.pop();
       }
-     for(var k=0;k<15;k++)
+     for(var k=0;k<30;k++)
     {
       d[k].obstacle();
     }
