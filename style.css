@@ -1,26 +1,26 @@
- html,body {
+html, body {
   margin: 0;
   padding: 0;
   background-color:#ffcc5c;
- 
 }
 canvas {
   display: inline;
   background-color:  #ff6f69;
   border:solid;
-  margin:10% 0% 0% 10%;
+
 
 }
 #canva
 {
- margin:0;
-  background-color:#ffcc5c;
   text-align:center;
+  margin-top:0px;
+  background-color:#ffcc5c;
+  padding-top:3%;
 }
 .heading
 {
    text-align:center;
   background-color:#ffcc5c;
   font-family: 'ProFontWindows', sans-serif;
- margin-bottom:0px;
+   margin-bottom:0px;
 }
