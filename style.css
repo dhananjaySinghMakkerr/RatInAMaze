@@ -2,12 +2,18 @@ html, body {
   margin: 0;
   padding: 0;
   background-color:#ffcc5c;
+ 
 }
 canvas {
   display: block;
   background-color:  #ff6f69;
   border:solid;
+  margin:10% 0% 0% 10%;
 
+}
+#canva
+{
+  text-align:center;
 }
 .heading
 {
