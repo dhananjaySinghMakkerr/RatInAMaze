@@ -100,7 +100,7 @@ function cell(i,j){
     }
 }
 function setup() {
-  cnv=createCanvas(400,400);
+  cnv=createCanvas(800,800);
   cols=floor(width/size);
   rows=floor(height/size);
   cnv.parent('canva');
