@@ -103,9 +103,7 @@ function setup() {
   cnv=createCanvas(400,400);
   cols=floor(width/size);
   rows=floor(height/size);
-  var p = (windowWidth - width) / 2;
-  var q = (windowHeight - height) / 2;
-  cnv.position(p, q);
+  cnv.parent('canva');
   frameRate(4);
   for(var i=0;i<rows;i++)
     {
