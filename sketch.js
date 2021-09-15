@@ -58,15 +58,18 @@ function cell(i,j){
        }
      var neighbors=[];
      var right=grid[index(i+1,j)];
+     
      var bottom=grid[index(i,j+1)];
-     if(right&&!right.visited&&grid2[index(i,j+1)]!=-1)
-       neighbors.push(right);
-     if(bottom&&!bottom.visited&&grid2[index(i+1,j)]!=-1)
+    
+     if(right&&!right.visited&&grid2[index(i+1,j)]!=-1)
+      neighbors.push(right);
+     if(bottom&&!bottom.visited&&grid2[index(i,j+1)]!=-1)
        neighbors.push(bottom);
      if(neighbors.length>0)
        {
             //var r=floor(random(0,2));
-            return neighbors[0];
+          return neighbors[0];
+         console.log(neighbors[0].i,neighbors[0]);
        }
      else
        {
@@ -79,13 +82,13 @@ function cell(i,j){
   var x=a.i-b.i;
   if(x==-1)
     {
-      a.walls[3]=false;
-      b.walls[1]=false;
+      a.walls[1]=false;
+      b.walls[3]=false;
     }
    if(x==1)
     {
-      a.walls[1]=false;
-      b.walls[3]=false;
+      a.walls[3]=false;
+      b.walls[1]=false;
     }
   var y=a.j-b.j;
   if(y==-1)
@@ -103,7 +106,6 @@ function setup() {
   cnv=createCanvas(600,600);
   cols=floor(width/size);
   rows=floor(height/size);
-  cnv.parent('canva');
   frameRate(4);
   for(var i=0;i<rows;i++)
     {
@@ -113,17 +115,17 @@ function setup() {
            grid.push(c);
          }
     }
-  for(var i=0;i<rows;i++)
+  for(var i=0;i<cols;i++)
     {
-      for(var j=0;j<cols;j++)
+      for(var j=0;j<rows;j++)
             grid2[index(i,j)]=0;
     }
   current=grid[0];
 
   for(var k=0;k<40;k++)
   {
-  a1.push(floor(random(1,rows-1)));
-  a2.push(floor(random(1,cols)));
+  a1.push(floor(random(1,rows)));
+  a2.push(floor(random(1,cols-1)));
   }
   for(var k=0;k<40;k++)
     {
@@ -135,14 +137,13 @@ function setup() {
     {
       for(var k=0;k<3;k++)
           console.log(grid2[index(t,k)]);
-
     }*/
 current.visited=true;
 
 }
 function index(i,j)
 {
-  if(i<0||j<0||i>rows-1||j>cols-1)
+  if(i<0||j<0||i>cols-1||j>rows-1)
   {
     return -1;
   }
