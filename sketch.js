@@ -106,6 +106,7 @@ function setup() {
   cnv=createCanvas(600,600);
   cols=floor(width/size);
   rows=floor(height/size);
+  cnv.parent('canva');
   frameRate(4);
   for(var i=0;i<rows;i++)
     {
