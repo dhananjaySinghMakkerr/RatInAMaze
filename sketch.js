@@ -146,7 +146,7 @@ function index(i,j)
   {
     return -1;
   }
-  return i+j*rows;
+  return j+i*cols;
 }
 function draw() {
   //background(200);
