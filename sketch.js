@@ -57,8 +57,8 @@ function cell(i,j){
          return current;
        }
      var neighbors=[];
-     var right=grid[index(i,j+1)];
-     var bottom=grid[index(i+1,j)];
+     var right=grid[index(i+1,j)];
+     var bottom=grid[index(i,j+1)];
      if(right&&!right.visited&&grid2[index(i,j+1)]!=-1)
        neighbors.push(right);
      if(bottom&&!bottom.visited&&grid2[index(i+1,j)]!=-1)
@@ -79,24 +79,24 @@ function cell(i,j){
   var x=a.i-b.i;
   if(x==-1)
     {
-      a.walls[2]=false;
-      b.walls[0]=false;
+      a.walls[3]=false;
+      b.walls[1]=false;
     }
    if(x==1)
-    {
-      a.walls[0]=false;
-      b.walls[2]=false;
-    }
-  var y=a.j-b.j;
-  if(y==-1)
     {
       a.walls[1]=false;
       b.walls[3]=false;
     }
+  var y=a.j-b.j;
+  if(y==-1)
+    {
+      a.walls[2]=false;
+      b.walls[0]=false;
+    }
   if(y==1)
     {
-      a.walls[3]=false;
-      b.walls[1]=false;
+      a.walls[0]=false;
+      b.walls[2]=false;
     }
 }
 function setup() {
