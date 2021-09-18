@@ -1,3 +1,34 @@
+var sketch=function(p)
+{
+  p.tx=0;
+  p.trans=50;
+  p.setup=function()
+  {
+   
+    p.cv=p.createCanvas(400, 100);
+     p.background(100,100);
+    p.cv.parent('canva2');
+     
+
+  }
+  p.draw=function()
+  {
+    p.frameRate(10);
+   p.background(10+p.trans);
+    p.textSize(30);
+    if(p.tx==p.width)
+      {
+        p.tx=0;
+        p.trans=0;
+        
+      }
+  p.textFont('Helvetica');
+  p.text('Rat In A Maze..!',p.width/2-300+p.tx, p.height/2);
+     p.tx=p.tx+10;
+    p.trans=p.trans+5;
+  }
+}
+
 var grid=[];
 var grid2=new Array(401);
 var cols;
@@ -46,7 +77,8 @@ function cell(i,j){
   {
     var x=this.i*size;
     var y=this.j*size;
-
+    fill(140,150);
+    rect(x,y,size,size);
     line(x,y,x+size,y+size);
     line(x+size,y,x,y+size);
    }
@@ -183,3 +215,4 @@ function draw() {
   current.highlight();
   circle(current.i*size+(size/2),current.j*size+(size/2),5);
 }
+var myp5=new p5(sketch);
