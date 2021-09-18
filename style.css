@@ -10,6 +10,10 @@ canvas {
 
 
 }
+.container
+{
+   background-color:#ffcc5c;
+}
 #canva
 {
   text-align:center;
@@ -17,10 +21,11 @@ canvas {
   background-color:#ffcc5c;
   padding-top:3%;
 }
-.heading
+#canva2
 {
-   text-align:center;
+  text-align:center;
+  margin-top:0px;
   background-color:#ffcc5c;
-  font-family: 'ProFontWindows', sans-serif;
-   margin-bottom:0px;
+  padding-top:5%;
+  padding-left:5%
 }
