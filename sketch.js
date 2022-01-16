@@ -29,6 +29,43 @@ var sketch=function(p)
   }
 }
 
+
+var sketch1=function(p)
+{
+  p.tx=0;
+  p.c=0;
+  p.trans=50;
+  p.setup=function()
+  {
+   
+    p.cv=p.createCanvas(400, 300);
+     p.background(100,100);
+    p.cv.parent('canva3');
+     
+
+  }
+  p.draw=function()
+  {
+    p.frameRate(10);
+   p.background(10+p.trans);
+    p.textSize(15);
+    if(p.c==100)
+      {
+        p.trans=10;
+        p.c=0;
+      }
+  p.textFont('Helvetica');
+  p.text('A maze is provided in the form R * C matrix, where R is the total number of rows',10,30);
+  p.text('the total number of and C is the total number of columns present in the matrix.',10,70);      p.text('present in the matrix . The cell m[0][0] is the source.From ',10,110);
+    p.text('the source, the rat starts its journey. The rat has to reach ',10,150);
+    p.text('cell m[R - 1][C - 1],the destination cell.The rat can only',10,190);
+    p.text('move in the rightward (→) or in the downward (↓) direction',10,230);
+    p.text('from the cell where it is currently present.',10,270);
+     //p.tx=p.tx+10;
+    p.trans=p.trans+5;
+    p.c=p.c+1;
+  }
+}
 var grid=[];
 var grid2=new Array(401);
 var cols;
@@ -216,3 +253,4 @@ function draw() {
   circle(current.i*size+(size/2),current.j*size+(size/2),5);
 }
 var myp5=new p5(sketch);
+var p55=new p5(sketch1);
